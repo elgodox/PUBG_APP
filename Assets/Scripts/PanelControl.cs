@@ -33,7 +33,7 @@ public class PanelControl : MonoBehaviour
     public void AddItemToScrollPanel<T>(T gameObject)
     {
         Tournament tournament = gameObject as Tournament;
-        _objectTournament.SetText(tournament.id + " - " + tournament.attributes.createdAt);
+        _objectTournament.SetText(tournament.id , tournament.attributes.createdAt);
         Instantiate(_objectTournament, scrollPanel.transform);
     }
 }

@@ -6,10 +6,12 @@ using UnityEngine.UI;
 
 public class ObjectTournament : MonoBehaviour
 {
-    public Text text;
+    public Text textId;
+    public Text textDate;
 
-    public void SetText(string t)
+    public void SetText(string id, DateTime date)
     {
-        text.text = t;
+        textId.text = id;
+        textDate.text = date.ToString();
     }
 }
