@@ -40,7 +40,6 @@ public class RestManager : MonoBehaviour
         else
         {
             OnObtainingData.Invoke(false);
-            var counter = 0;
             var deserializer = new TournamentJsonDeserializer();
             var rData =deserializer.Deserialize(www.downloadHandler.text);
             foreach (var item in rData.data)

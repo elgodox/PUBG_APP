@@ -5,13 +5,14 @@ public class PanelControl : MonoBehaviour
 {
     public string textForLoading;
     public string textForError;
-
+    
     public Text loadingText;
-    public GameObject scrollPanel;
+    public GameObject scrollPanel, scroll;
     private ObjectTournament _objectTournament;
 
     private void Awake()
     {
+        scroll.gameObject.SetActive(false);
         _objectTournament = Resources.Load<ObjectTournament>("Tournament");
     }
 
@@ -20,6 +21,8 @@ public class PanelControl : MonoBehaviour
     {
         loadingText.text = textForLoading;
         loadingText.gameObject.SetActive(active);
+        if(!active)
+            scroll.gameObject.SetActive(true);
     }
 
     public void ShowErrorText(bool active)
