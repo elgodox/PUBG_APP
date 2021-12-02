@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,6 @@ public class ObjectTournament : MonoBehaviour
     public void SetText(string id, DateTime date)
     {
         textId.text = id;
-        textDate.text = date.ToString();
+        textDate.text = date.ToString(CultureInfo.CurrentCulture);
     }
 }
