@@ -253,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textId: {fileID: 6323334309958603810}
   textDate: {fileID: 6482422322996442211}
+  _button: {fileID: 4669643619915288365}
 --- !u!114 &851200525517162162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,7 +317,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2835459967707004394}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 505495574753431642}
+        m_TargetAssemblyTypeName: ObjectTournament, Assembly-CSharp
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8701878353606620456
 MonoBehaviour:
   m_ObjectHideFlags: 0

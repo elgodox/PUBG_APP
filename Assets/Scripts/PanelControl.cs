@@ -1,14 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PanelControl : MonoBehaviour
 {
     public string textForLoading;
     public string textForError;
-    
     public Text loadingText;
     public GameObject scrollPanel, scroll;
     private ObjectTournament _objectTournament;
+    
 
     private void Awake()
     {
@@ -31,10 +32,11 @@ public class PanelControl : MonoBehaviour
         loadingText.gameObject.SetActive(active);
     }
 
-    public void AddItemToScrollPanel<T>(T gameObject)
+    public void AddItemToScrollPanel<T>(T obj)
     {
-        Tournament tournament = gameObject as Tournament;
+        var tournament = obj as Tournament;
         _objectTournament.SetText(tournament.id , tournament.attributes.createdAt);
         Instantiate(_objectTournament, scrollPanel.transform);
     }
+
 }
